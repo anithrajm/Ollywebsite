@@ -1,0 +1,128 @@
+.container{
+    background-color:white;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.topbanner{
+    background-color:darkmagenta;
+    color:white;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.navbar{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: white;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+}
+.logo{
+    color: #b00886;
+    font-weight: 900;
+}
+
+.navlinks{
+    display: flex;
+    gap: 2rem;
+    color: gray;
+}
+.navlinks p{
+    cursor: pointer;
+}
+
+.navicons{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+}
+.login{
+    color: gray;
+    cursor: pointer;
+}
+
+.shopbtn{
+    border: 3px solid #b00886;
+    background-color: white;
+    color: #b00886;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.titel{
+    margin: 20px;
+    color: #b00886;
+    font-size: 30px;
+    font-weight: 200;
+
+}
+
+.cardcontainer{
+    justify-content: center;
+    display: flex;
+    gap: 50px;
+    grid-template-columns: repeat(4,1fr);
+    padding: 20px;
+    
+
+    
+}
+
+
+.cardcontainer{
+    background-color: white;
+    border-radius: 10px;
+    color: gray;
+    overflow:scroll;
+    transition: 0.3;
+    /* box-shadow: 0px 2px 5px rgba(0,0,0,0.1); */
+
+
+}
+.card:hover{
+    transform: scale(1.05);
+}
+.card img{
+   
+    object-fit: cover;
+}
+
+.card p{
+    text-align: center;
+    padding: 10px;
+    color: gray;
+    font-weight: 500;
+
+}
+
+.search{
+    color: gray;
+    cursor: pointer;
+}
+
+.shopingcart{
+    color: gray;
+    cursor: pointer;
+}
+
+.supportbtn{
+    background-color: #b00886;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: 550;
+    color: white;
+    
+    
+}
+
+.supportbtn{
+    position: relative;
+    top: 10px;
+    left: 20px ;
+}
