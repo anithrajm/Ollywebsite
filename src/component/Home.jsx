@@ -5,13 +5,29 @@ import sleepImg from "../assets/1.png";
 import immunityImg from "../assets/2.png";
 import beatyImg from "../assets/3.png";
 import moodImg from "../assets/4.png";
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+
+
 
 
 
 export default function Home() {
 
     const [menuOpen,setmenuOpen]=useState(false);
+
+
+    useEffect(()=>{
+    if(menuOpen){
+        document.body.classList.add('menu-open');
+    }
+    else{
+        document.body.classList.remove('menu-open');
+    }
+    return()=>
+    document.body.classList.remove('menuOpen');
+    
+},[menuOpen]);
+
 
 const categories=[
 
