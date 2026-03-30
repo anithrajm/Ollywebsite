@@ -1,15 +1,17 @@
-import { Search, ShoppingCart } from 'lucide-react'
+import { Search, ShoppingCart , Menu} from 'lucide-react'
 
 
 import sleepImg from "../assets/1.png";
 import immunityImg from "../assets/2.png";
 import beatyImg from "../assets/3.png";
 import moodImg from "../assets/4.png";
-import React from 'react'
+import React, { useState } from 'react'
 
 
 
 export default function Home() {
+
+    const [menuOpen,setmenuOpen]=useState(false);
 
 const categories=[
 
@@ -32,7 +34,7 @@ const categories=[
         title:"MOOD SUPPORT",
         img: moodImg,
     }
-]
+];
 
 
 
@@ -48,8 +50,12 @@ const categories=[
 <div className="navbar">
 
     <h1 className="logo">OLLY.</h1>
+    <button className='hamburger' onClick={()=>setmenuOpen(!setmenuOpen)} >
+        <Menu size={24} />
 
-    <div className="navlinks">
+    </button>
+
+    <div className={`navlinks $ {menuOpen ? 'active' : ''}`} >
         <p>SHOP</p>
         <p>INSIDE THE PRODUCT</p>
         <p>ABOUT</p>

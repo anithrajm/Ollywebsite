@@ -2,6 +2,7 @@
     background-color:white;
     min-height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 2rem;
 }
 
 .topbanner{
@@ -19,10 +20,12 @@
     padding: 15px 30px;
     background-color: white;
     box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+    position: relative;
 }
 .logo{
     color: #b00886;
     font-weight: 900;
+    margin: 0;
 }
 
 .navlinks{
@@ -32,6 +35,7 @@
 }
 .navlinks p{
     cursor: pointer;
+    margin: 0;
 }
 
 .navicons{
@@ -43,16 +47,18 @@
 .login{
     color: gray;
     cursor: pointer;
+    margin: 0;
 }
 
 .shopbtn{
     border: 3px solid #b00886;
     background-color: white;
     color: #b00886;
-    padding: 5px 12px;
+    padding: 8px 16px;
     border-radius: 20px;
     font-weight: 700;
     cursor: pointer;
+    white-space: nowrap;
 }
 
 .titel{
@@ -60,18 +66,17 @@
     color: #b00886;
     font-size: 30px;
     font-weight: 200;
+    /* text-align: center; */
 
 }
 
 .cardcontainer{
     justify-content: center;
-    display: flex;
-    gap: 50px;
+    display: grid;
+    gap: clamp(20px,5vw,50px);
     grid-template-columns: repeat(4,1fr);
     padding: 20px;
-    
-
-    
+     
 }
 
 
@@ -79,11 +84,16 @@
     background-color: white;
     border-radius: 10px;
     color: gray;
-    overflow:scroll;
+    overflow:auto;
     transition: 0.3;
     /* box-shadow: 0px 2px 5px rgba(0,0,0,0.1); */
 
 
+}
+.card{
+    transition: transform 0.3s ease;
+    width:100%;
+    max-width: 250px;
 }
 .card:hover{
     transform: scale(1.05);
@@ -91,6 +101,8 @@
 .card img{
    
     object-fit: cover;
+    width:100%;
+   
 }
 
 .card p{
@@ -113,16 +125,77 @@
 
 .supportbtn{
     background-color: #b00886;
-    padding: 10px 20px;
+    padding: 12px 24px;
     border-radius: 30px;
     font-weight: 550;
     color: white;
+    border: none;
+    cursor: pointer;
+    display: block;
+    /* margin: 20px auto; */
     
     
 }
 
-.supportbtn{
-    position: relative;
-    top: 10px;
-    left: 20px ;
+.hamburger{
+    display: none;
+    background-color: none;
+    border: none;
+    color: #b00886;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+@media(max-width:768px){
+    .navbar{
+        padding: 15px;
+        flex-wrap: wrap;
+    }
+    .navlinks{
+        display: none;
+        position: absolute;
+        top: 100%;
+        left:0;
+        right:0;
+        background-color: white;
+        flex-direction: column;
+        padding: 1rem;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        gap:1rem;
+
+     }
+
+     .navlinks.active{
+        display: flex;
+     }
+     .navicons{
+        gap:1rem;
+     }
+     .shopbtn{
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+    .hamburger{
+        display: block;
+    }
+    .cardcontainer{
+        grid-template-columns: repeat(2,1fr);
+        gap:20px;
+        padding: 15px;
+    }
+}
+@media(max-width:480px){
+    .logo{font-size: 1.5rem;}
+    .cardcontainer{
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+    .titel{
+        margin: 15px 10px;
+    }
+    .supportbtn{
+        margin: 10px;
+        padding: 10px 16px;
+    }
 }
