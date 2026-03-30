@@ -50,7 +50,7 @@ const categories=[
 <div className="navbar">
 
     <h1 className="logo">OLLY.</h1>
-    <button className='hamburger' onClick={()=>setmenuOpen(!setmenuOpen)} >
+    <button className='hamburger' onClick={()=>setMenuOpen(!setmenuOpen)} >
         <Menu size={24} />
 
     </button>
