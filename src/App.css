@@ -161,13 +161,20 @@
         background-color: white;
         flex-direction: column;
         padding: 1rem;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         gap:1rem;
+        z-index: 1000;
+        width: 100%;
 
      }
 
+
      .navlinks.active{
         display: flex;
+     }
+
+     .navbar{
+        z-index: 999;
      }
      .navicons{
         gap:1rem;
